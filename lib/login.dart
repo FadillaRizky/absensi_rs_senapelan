@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'controller/controller.dart';
+import 'menu.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -62,14 +64,14 @@ class LoginPage extends StatelessWidget {
                                 children: [
                                   Text(
                                     "Halo, Selamat",
-                                    style: TextStyle(
+                                    style: GoogleFonts.montserrat(
                                         color: Colors.white,
                                         fontSize: 36,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "datang",
-                                    style: TextStyle(
+                                    style: GoogleFonts.montserrat(
                                         color: Colors.white,
                                         fontSize: 36,
                                         fontWeight: FontWeight.bold),
@@ -224,7 +226,9 @@ class LoginPage extends StatelessWidget {
                                         MaterialStateProperty.all(Colors.white),
                                     shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(Menu());
+                                  },
                                   child: Text("Login",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 16),),
                                 ),
                               ),
